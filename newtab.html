@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preload" href="wallpaper.jpg" as="image">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      /* 底色 - 改成你壁纸的主色调 */
+      background-color: white;
+    }
+
+    /* 壁纸层 - 模仿 Chrome 原生新标签页的淡入效果 */
+    #wallpaper {
+      position: fixed;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      
+      /* 初始透明 */
+      opacity: 0;
+      
+      /* GPU 加速 */
+      will-change: opacity;
+      transform: translateZ(0);
+      contain: strict;
+    }
+
+    /* 淡入动画 */
+    #wallpaper.loaded {
+      animation: fadeIn 200ms ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="wallpaper"></div>
+  <script src="newtab.js"></script>
+</body>
+</html>

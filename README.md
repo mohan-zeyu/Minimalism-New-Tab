@@ -1,1 +1,5 @@
 # Minimalism-New-Tab
+Lots of people tend to customize Chrome new tab with their own wallpapers. But unfortunately, at the time you delightedly press "Command + T", you find an annoying search bar and Google icon without transparent background, unexpectedly. This really bothers a lot to me. 
+Initially, I want to find method to remove these two components but it seems unfeasible. Then, I want to utilizing other's extensions, but I didn't discover anything satisfiable. So I begin to create my own extension.
+At first, when the work completed and I tested feature, I realize the issue, which almost all of extensions have, the wallpaper cannot show instantly when we open a new tab. If we just write a simple html and css, the display process will be abrupt and unelegant, while I found the process in google default new tab performes much better. So I referred it and add some animation.
+Well, that's the journey of this simple extension, not fancy, only minimalism.

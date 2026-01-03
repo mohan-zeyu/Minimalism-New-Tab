@@ -5,5 +5,8 @@
   "description": "极致性能的新标签页壁纸",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
+  },
+  "icons": {
+    "128": "icon.ico"
   }
 }

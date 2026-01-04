@@ -8,9 +8,4 @@ img.onload = () => {
   wp.offsetHeight;
   wp.classList.add('loaded');
 };
-
-// 优先 WebP，不支持则回退 JPG
-const webp = new Image();
-webp.onload = () => { img.src = 'wallpaper.webp'; };
-webp.onerror = () => { img.src = 'wallpaper.jpg'; };
-webp.src = 'wallpaper.webp';
+img.src = 'wallpaper.jpg';

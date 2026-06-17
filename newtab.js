@@ -8,4 +8,5 @@ img.onload = () => {
   wp.offsetHeight;
   wp.classList.add('loaded');
 };
-img.src = 'wallpaper.jpg';
+// 壁纸文件名由 preload.js 决定（每次打开新标签页轮流切换）
+img.src = window.__wallpaperSrc || 'wallpaper.jpg';
